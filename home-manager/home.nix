@@ -30,10 +30,17 @@
     # pkgs.bash-completion
   ];
 
-
-  programs.direnv = {
-    enable = true;
+  
+  home.sessionVariables = {
+    EDITOR = "vim";
   };
+
+  programs.bash.shellAliases = {
+    tasks = "task sync ; task";
+  };
+
+
+  programs.direnv.enable = true;
 
   home.file = {
     ".inputrc".text = "set editing-mode vi";
@@ -43,6 +50,16 @@
       historyDuplicates: IgnoreConsecutive
       editMode: Vi
     '';
+
+    ".stack/config.yaml".text = ''
+      templates:
+        params:
+          author-email: daniel.rolls.27@googlemail.com
+          author-name: Daniel Rolls
+          github-username: danielrolls
+    '';
+
+
   };
 
 }
