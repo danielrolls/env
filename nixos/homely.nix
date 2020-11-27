@@ -13,12 +13,6 @@
 
       bash.enable = true;
 
-      git = {
-        enable = true;
-        userName = "Daniel Rolls";
-        userEmail = "daniel.rolls.27@googlemail.com";
-      };
-
       taskwarrior = {
         enable = true;
         colorTheme = "light-256";
@@ -46,10 +40,6 @@
       };
     };
 
-    home.packages = with pkgs; [
-      stack
-    ];
-
     
     home.sessionVariables = {
       EDITOR = "vim";
@@ -64,21 +54,6 @@
 
     home.file = {
       ".inputrc".text = "set editing-mode vi";
-
-      ".haskeline".text = ''
-        maxHistorySize: Nothing
-        historyDuplicates: IgnoreConsecutive
-        editMode: Vi
-      '';
-
-      ".stack/config.yaml".text = ''
-        templates:
-          params:
-            author-email: daniel.rolls.27@googlemail.com
-            author-name: Daniel Rolls
-            github-username: danielrolls
-      '';
-
     };
 
   };
