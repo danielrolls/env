@@ -29,7 +29,7 @@
   programs.geary.enable = false;
   programs.steam.enable = true;
 
-  environment.gnome3.excludePackages = map (x: builtins.getAttr x pkgs.gnome3) [
+  environment.gnome3.excludePackages = map (x: pkgs.gnome3."${x}") [
    "epiphany"
    "geary"
    "gnome-software"
