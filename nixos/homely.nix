@@ -4,6 +4,10 @@ userName:
 {
   imports = [ <home-manager/nixos> ];
 
+  environment.systemPackages = with pkgs; [
+    vim_configurable
+  ];
+
   home-manager.users."${userName}" = { pkgs, ... }: {
     programs = {
 
