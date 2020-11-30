@@ -1,9 +1,10 @@
+userName:
 { config, lib, pkgs, ... }:
 
 {
   imports = [ <home-manager/nixos> ];
 
-  home-manager.users.dan = { pkgs, ... }: {
+  home-manager.users."${userName}" = { pkgs, ... }: {
 
     programs = {
 
