@@ -46,9 +46,12 @@
   };
 
   home-manager.users.dan = { pkgs, ... }: {
-    # home.packages = [ pkgs.atool pkgs.httpie ];
-    programs = {
+    home.packages = with pkgs; [ 
+      xournalpp
+      keepassxc
+    ];
 
+    programs = {
       chromium.enable = true;
     };
   };
