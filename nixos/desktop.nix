@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     vlc
+    bash-completion
   ];
 
   services.printing = {
