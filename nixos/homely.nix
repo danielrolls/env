@@ -4,6 +4,8 @@ userName:
 {
   imports = [ <home-manager/nixos> ];
 
+  time.timeZone = "Europe/London";
+
   environment.systemPackages = with pkgs; [
     vim_configurable
   ];
