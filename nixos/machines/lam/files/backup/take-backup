@@ -1,0 +1,1 @@
+borg create --progress /run/media/dan/FATTY/lam-borg-backups::backup-`date +%F` /data
