@@ -5,6 +5,10 @@
   environment.systemPackages = with pkgs; [
     vlc
     bash-completion
+    cryptsetup
+    signal-desktop
+    usbutils
+    file
   ];
 
   services.printing = {
