@@ -9,6 +9,7 @@
     signal-desktop
     usbutils
     file
+    zim
   ];
 
   services.printing = {
