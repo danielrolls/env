@@ -1,3 +1,4 @@
+{lib, ...}:
 {
   networking = {
     hostName = "lam"; 
@@ -8,5 +9,17 @@
     options = ["nofail"];
   };
 
+  services.xserver = {
+    libinput.enable = true; # Enable touchpad support.
+    #videoDrivers = [ "ati_unfree" ];
+  };
+
+  # Use the systemd-boot EFI boot loader.
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
+
+  swapDevices = lib.mkForce [];
 }
 
