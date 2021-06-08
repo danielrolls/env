@@ -29,13 +29,15 @@
     layout = "gb";
 
     displayManager.gdm.enable = true;
-    desktopManager.gnome3.enable = true;
+    displayManager.gdm.wayland = true;
+    desktopManager.gnome.enable = true;
   };
 
   programs.geary.enable = false;
   programs.steam.enable = true;
 
-  environment.gnome3.excludePackages = map (x: pkgs.gnome3."${x}") [
+
+  environment.gnome.excludePackages = map (x: pkgs.gnome3."${x}") [
    "epiphany"
    "geary"
    "gnome-software"
