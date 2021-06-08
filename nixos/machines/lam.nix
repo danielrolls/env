@@ -11,7 +11,8 @@
 
   services.xserver = {
     libinput.enable = true; # Enable touchpad support.
-    #videoDrivers = [ "ati_unfree" ];
+    videoDrivers = [ "modesetting" ];
+    useGlamor = true;
   };
 
   # Use the systemd-boot EFI boot loader.
