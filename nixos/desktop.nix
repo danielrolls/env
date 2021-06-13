@@ -47,6 +47,8 @@
    "gnome-photos"
    "gnome-weather"
   ];
+
+  services.gnome.games.enable = true;
   
   users.users.dan = {
     isNormalUser = true;
