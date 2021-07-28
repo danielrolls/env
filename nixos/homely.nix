@@ -28,6 +28,7 @@ userName:
             M.coefficient = 5; # + 1.1
             H.coefficient = 10; # + 4
           };
+          urgency.user.tag."in".coefficient = 30;
           uda.details = {
             type = "string";
             label = "Details";
@@ -53,6 +54,7 @@ userName:
 
     programs.bash.shellAliases = {
       tasks = "task sync ; task";
+      "in" = "task add +in";
     };
 
 
