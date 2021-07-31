@@ -8,6 +8,25 @@ userName:
 
   environment.systemPackages = with pkgs; [
     vim_configurable
+    (neovim.override {
+      #vimAlias = true;
+      withNodeJs = true;
+      configure = {
+        packages.myPlugins = with pkgs.vimPlugins; {
+          start = [
+                    coc-nvim
+                    haskell-vim
+                    ghcid
+                    vim-hindent
+                    coc-json
+                    coc-vimlsp
+                  ];
+          opt = [];
+        };
+        #customRC = "inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : \\\"\\<C-g>u\\<CR>\\<c-r>=coc#on_enter()\\<CR>\" ";
+      };
+    }
+  )
   ];
 
   home-manager.users."${userName}" = { pkgs, ... }: {
