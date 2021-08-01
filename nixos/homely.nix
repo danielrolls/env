@@ -72,8 +72,9 @@ userName:
     };
 
     programs.bash.shellAliases = {
-      tasks = "task sync ; task";
       "in" = "task add +in";
+      next = "task add +next";
+      tasks = "task sync ; task";
     };
 
 
