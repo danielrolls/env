@@ -7,6 +7,9 @@ userName:
   time.timeZone = "Europe/London";
 
   environment.systemPackages = with pkgs; [
+    (pkgs.writeShellScriptBin "nixFlakes" ''
+      exec ${pkgs.nixUnstable}/bin/nix --experimental-features "nix-command flakes" "$@"
+    '')
     vim_configurable
     (neovim.override {
       #vimAlias = true;
