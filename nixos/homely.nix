@@ -10,9 +10,8 @@ userName:
     (pkgs.writeShellScriptBin "nixFlakes" ''
       exec ${pkgs.nixUnstable}/bin/nix --experimental-features "nix-command flakes" "$@"
     '')
-    vim_configurable
     (neovim.override {
-      #vimAlias = true;
+      vimAlias = true;
       withNodeJs = true;
       configure = {
         packages.myPlugins = with pkgs.vimPlugins; {
@@ -34,10 +33,6 @@ userName:
 
   home-manager.users."${userName}" = { pkgs, ... }: {
     programs = {
-
-      vim = {
-        enable = true;
-      };
 
       bash.enable = true;
 
