@@ -14,6 +14,14 @@ userName:
         userEmail = "daniel.rolls.27@googlemail.com";
       };
 
+      vscode = {
+        enable = true;
+        package = pkgs.vscodium;    # You can skip this if you want to use the unfree version
+        extensions = with pkgs.vscode-extensions; [
+          vscodevim.vim
+          haskell.haskell
+        ];
+      };
     };
 
     home.packages = with pkgs; [
