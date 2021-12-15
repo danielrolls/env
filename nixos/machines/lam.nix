@@ -22,7 +22,7 @@
   };
 
   swapDevices = lib.mkForce [];
- `
+ 
   hardware.sensor.iio.enable = true;
 }
 
