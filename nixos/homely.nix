@@ -22,6 +22,7 @@ userName:
                     vim-hindent
                     coc-json
                     coc-vimlsp
+                    vimwiki
                   ];
           opt = [];
         };
