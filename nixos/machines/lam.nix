@@ -1,4 +1,5 @@
-{lib, ...}:
+userName:
+{lib, pkgs, ...}:
 {
   networking = {
     hostName = "lam"; 
@@ -24,5 +25,7 @@
   swapDevices = lib.mkForce [];
  
   hardware.sensor.iio.enable = true;
+
+  home-manager.users."${userName}".programs.neovim.extraConfig =  "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]"; 
 }
 

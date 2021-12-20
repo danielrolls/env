@@ -40,7 +40,6 @@ userName:
            coc-vimlsp
            vimwiki
 	];
-	extraConfig = "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]";
       };
 
       bash.enable = true;
