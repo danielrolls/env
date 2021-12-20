@@ -10,30 +10,38 @@ userName:
     (pkgs.writeShellScriptBin "nixFlakes" ''
       exec ${pkgs.nixUnstable}/bin/nix --experimental-features "nix-command flakes" "$@"
     '')
-    (neovim.override {
-      vimAlias = true;
-      withNodeJs = true;
-      configure = {
-        packages.myPlugins = with pkgs.vimPlugins; {
-          start = [
-                    coc-nvim
-                    haskell-vim
-                    ghcid
-                    vim-hindent
-                    coc-json
-                    coc-vimlsp
-                    vimwiki
-                  ];
-          opt = [];
-        };
-        #customRC = "inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : \\\"\\<C-g>u\\<CR>\\<c-r>=coc#on_enter()\\<CR>\" ";
-      };
-    }
-  )
   ];
 
   home-manager.users."${userName}" = { pkgs, ... }: {
     programs = {
+
+      neovim = {
+        enable = true;
+	vimAlias = true;
+	withNodeJs = true;
+	coc.enable = true;
+	coc.settings = {
+            "languageserver" = {
+              "haskell" = {
+                "command" = "haskell-language-server-wrapper";
+                "args" = ["--lsp"];
+                "rootPatterns" = ["*.cabal" "stack.yaml" "cabal.project" "package.yaml" "hie.yaml"];
+                "filetypes" = ["haskell" "lhaskell"];
+              };
+            };
+          };
+
+	plugins = with pkgs.vimPlugins; [  
+           coc-nvim
+           haskell-vim
+           ghcid
+           vim-hindent
+           coc-json
+           coc-vimlsp
+           vimwiki
+	];
+	extraConfig = "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]";
+      };
 
       bash.enable = true;
 
