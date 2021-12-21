@@ -34,7 +34,6 @@
   };
 
   programs.geary.enable = false;
-  programs.steam.enable = true;
 
 
   environment.gnome.excludePackages = map (x: pkgs.gnome3."${x}") [
@@ -66,6 +65,5 @@
       firefox.enable = true;
     };
   };
-
 
 }
