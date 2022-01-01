@@ -34,8 +34,7 @@ userName:
 	plugins = with pkgs.vimPlugins; [  
            coc-nvim
            haskell-vim
-           ghcid
-           vim-hindent
+           # ghcid
            coc-json
            coc-vimlsp
            vimwiki
