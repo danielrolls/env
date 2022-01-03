@@ -8,6 +8,8 @@ userName:
        # Provide a nice prompt if the terminal supports it.
        if [ "$TERM" != "dumb" ] || [ -n "$INSIDE_EMACS" ]; then
          PROMPT_COLOR="1;31m"
+         GIT_PS1_SHOWDIRTYSTATE=1
+         GIT_PS1_SHOWUNTRACKEDFILES=1
          ((UID)) && PROMPT_COLOR="1;32m"
          red='\[\e[0;31m\]'
          green='\[\e[0;32m\]'
