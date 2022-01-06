@@ -3,6 +3,7 @@ userName:
 {
   networking = {
     hostName = "lam"; 
+    interfaces.wlo1.useDHCP = true;
   };
 
   fileSystems."/data" = {
