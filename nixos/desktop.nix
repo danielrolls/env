@@ -1,6 +1,30 @@
 { config, lib, pkgs, ... }:
 
 {
+  users.users.dan = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "audio" "networkmanager" ]; 
+  };
+  sound.enable = true;
+
+  hardware.pulseaudio = {
+    enable = true;
+  };
+
+  services = {
+    printing.enable = true;
+    
+    xserver = {
+      enable = true;
+      layout = "gb";
+
+      displayManager.gdm.enable = true;
+      displayManager.gdm.wayland = true;
+      desktopManager.gnome.enable = true;
+    };
+
+    gnome.games.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     vlc
@@ -12,29 +36,7 @@
     zim
   ];
 
-  services.printing = {
-    enable = true;
-  };
-
-  sound.enable = true;
-
-  
-  hardware.pulseaudio = {
-    enable = true;
-  };
-
-
-  services.xserver = {
-    enable = true;
-    layout = "gb";
-
-    displayManager.gdm.enable = true;
-    displayManager.gdm.wayland = true;
-    desktopManager.gnome.enable = true;
-  };
-
   programs.geary.enable = false;
-
 
   environment.gnome.excludePackages = map (x: pkgs.gnome3."${x}") [
    "epiphany"
@@ -47,13 +49,6 @@
    "gnome-weather"
   ];
 
-  services.gnome.games.enable = true;
-  
-  users.users.dan = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "networkmanager" ]; 
-  };
-
   home-manager.users.dan = { pkgs, ... }: {
     home.packages = with pkgs; [ 
       xournalpp
@@ -65,5 +60,5 @@
       firefox.enable = true;
     };
   };
-
 }
+
