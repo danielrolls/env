@@ -3,6 +3,7 @@ userName:
 {
   networking = {
     hostName = "lam"; 
+    networkmanager.enable = true;
     interfaces.wlo1.useDHCP = true;
   };
 
