@@ -3,7 +3,10 @@ userName:
 {
   networking = {
     hostName = "lam"; 
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      unmanaged = [ "interface-name:ve-*" ]; # needed for containers
+    };
     interfaces.wlo1.useDHCP = true;
     useDHCP = false; # As of 21.11, the manual recommends setting this to false and specifying it on individual interfaces
   };
