@@ -10,7 +10,7 @@ userName:
 
   environment.systemPackages = with pkgs; [
     (pkgs.writeShellScriptBin "nixFlakes" ''
-      exec ${pkgs.nixUnstable}/bin/nix --experimental-features "nix-command flakes" "$@"
+      exec ${pkgs.nixFlakes}/bin/nix --experimental-features "nix-command flakes" "$@"
     '')
   ];
 
