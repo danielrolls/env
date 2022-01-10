@@ -11,5 +11,11 @@ in
       (import ./lam.nix "dan")
     ];
 
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
   system.stateVersion = "20.03"; # Do not change without checking docs
 }
