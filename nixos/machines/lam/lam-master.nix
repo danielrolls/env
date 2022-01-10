@@ -5,10 +5,9 @@ in
 {
   imports =
     [ ./lam-hardware-configuaration.nix
-      <home-manager/nixos>
-      (import ../homely.nix "dan")
-      (import ../dev.nix "dan")
-      (import ../desktop.nix)
+      (import ../../homely.nix "dan")
+      (import ../../dev.nix "dan")
+      (import ../../desktop.nix)
       (import ./lam.nix "dan")
     ];
 
