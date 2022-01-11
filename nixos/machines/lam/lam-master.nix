@@ -4,13 +4,6 @@ in
 
 {
 
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
-
   imports =
     [ ./lam-hardware-configuaration.nix
       (import ../../homely.nix "dan")
