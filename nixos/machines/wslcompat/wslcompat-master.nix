@@ -12,6 +12,13 @@ in
     ((import ../../dev.nix) defaultUser)
   ];
 
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
   home-manager.users."dro25".programs = {
     taskwarrior.dataLocation = "/mnt/c/Users/dro25/OneDrive\ -\ Sky/scarlethomeshare/taskwarrior";
   };
