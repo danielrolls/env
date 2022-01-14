@@ -19,8 +19,9 @@ in
     '';
   };
 
-  home-manager.users."dro25".programs = {
-    taskwarrior.dataLocation = "/mnt/c/Users/dro25/OneDrive\ -\ Sky/scarlethomeshare/taskwarrior";
+  home-manager.users."dro25".programs.taskwarrior = {
+    dataLocation = "/mnt/c/Users/dro25/OneDrive\ -\ Sky/scarlethomeshare/taskwarrior";
+    colorTheme = lib.mkForce "dark-256";
   };
 
   virtualisation.docker.enable = true;
