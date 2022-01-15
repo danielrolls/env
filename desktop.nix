@@ -31,7 +31,6 @@
     signal-desktop
     usbutils
     file
-    zim
   ];
 
   programs.geary.enable = false;
