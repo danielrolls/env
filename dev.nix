@@ -2,16 +2,13 @@ userName:
 { config, lib, pkgs, ... }:
 
 {
+  # Provide a nice prompt if the terminal supports it.
   programs.bash.promptInit = ''
-       # Provide a nice prompt if the terminal supports it.
        if [ "$TERM" != "dumb" ] || [ -n "$INSIDE_EMACS" ]; then
          PROMPT_COLOR="1;31m"
          GIT_PS1_SHOWDIRTYSTATE=1
          GIT_PS1_SHOWUNTRACKEDFILES=1
          ((UID)) && PROMPT_COLOR="1;32m"
-         red='\[\e[0;31m\]'
-         green='\[\e[0;32m\]'
-         black='\[\e[0;0m\]'
          if [ -n "$INSIDE_EMACS" ] || [ "$TERM" = "eterm" ] || [ "$TERM" = "eterm-color" ]; then
            # Emacs term mode doesn't support xterm title escape sequence (\e]0;)
            PS1="\n\[\033[$PROMPT_COLOR\][\u@\h:\w]\\$\[\033[0m\] "
@@ -37,7 +34,7 @@ userName:
 
       vscode = {
         enable = true;
-        package = pkgs.vscodium;    # You can skip this if you want to use the unfree version
+        package = pkgs.vscodium; # free version of vscode
         extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
           haskell.haskell
