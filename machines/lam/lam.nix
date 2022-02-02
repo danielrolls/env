@@ -1,6 +1,12 @@
 userName:
 {lib, pkgs, ...}:
 {
+  imports =
+    [ (import ../../homely.nix "dan")
+      (import ../../dev.nix "dan")
+      (import ../../desktop.nix)
+    ];
+
   networking = {
     hostName = "lam"; 
     networkmanager = {

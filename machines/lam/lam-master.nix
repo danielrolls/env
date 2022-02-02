@@ -6,9 +6,6 @@ in
 
   imports =
     [ ./lam-hardware-configuaration.nix
-      (import ../../homely.nix "dan")
-      (import ../../dev.nix "dan")
-      (import ../../desktop.nix)
       (import ./lam.nix "dan")
     ];
 
