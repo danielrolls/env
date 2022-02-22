@@ -56,6 +56,10 @@
       chromium.enable = true;
       firefox.enable = true;
     };
+
+    dconf.settings = {
+      "org/gnome/settings-daemon/plugins/media-keys".home = ["<Super>e"];
+    };
   };
 }
 
