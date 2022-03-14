@@ -3,7 +3,7 @@
 {
   users.users.dan = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "networkmanager" ]; 
+    extraGroups = [ "wheel" "audio" "networkmanager" "libvirtd"]; 
   };
   sound.enable = true;
 
@@ -45,6 +45,8 @@
    "gnome-photos"
    "gnome-weather"
   ];
+
+  virtualisation.libvirtd.enable = true;
 
   home-manager.users.dan = { pkgs, ... }: {
     home.packages = with pkgs; [ 
