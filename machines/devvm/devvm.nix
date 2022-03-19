@@ -21,10 +21,7 @@ userName:
       autoResize = true;
   };
 
-  users.users.dan = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "networkmanager"]; 
-  };
+  users.users."${userName}".extraGroups = [ "wheel" "audio" "networkmanager"]; 
 
 }
 
