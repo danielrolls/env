@@ -50,8 +50,9 @@ userName:
 
   home-manager.users."${userName}" = { pkgs, ... }: {
     home.packages = with pkgs; [ 
-      xournalpp
+      avidemux
       keepassxc
+      xournalpp
     ];
 
     programs = {
