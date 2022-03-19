@@ -1,7 +1,8 @@
+userName:
 { config, lib, pkgs, ... }:
 
 {
-  users.users.dan = {
+  users.users."${userName}" = {
     extraGroups = [ "wheel" "audio" "networkmanager" "libvirtd"]; 
   };
   sound.enable = true;
@@ -47,7 +48,7 @@
 
   virtualisation.libvirtd.enable = true;
 
-  home-manager.users.dan = { pkgs, ... }: {
+  home-manager.users."${userName}" = { pkgs, ... }: {
     home.packages = with pkgs; [ 
       xournalpp
       keepassxc

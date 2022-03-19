@@ -4,7 +4,7 @@ userName:
   imports =
     [ (import ../../homely.nix "dan")
       (import ../../dev.nix "dan")
-      (import ../../desktop.nix)
+      (import ../../desktop.nix "dan")
     ];
 
   networking = {
