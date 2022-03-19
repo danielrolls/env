@@ -2,7 +2,6 @@
 
 {
   users.users.dan = {
-    isNormalUser = true;
     extraGroups = [ "wheel" "audio" "networkmanager" "libvirtd"]; 
   };
   sound.enable = true;

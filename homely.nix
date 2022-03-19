@@ -12,6 +12,10 @@ userName:
     '')
   ];
 
+  users.users."${userName}" = {
+    isNormalUser = true;
+  };
+
   home-manager.users."${userName}" = { pkgs, ... }: {
     programs = {
 
