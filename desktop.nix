@@ -37,6 +37,7 @@ userName:
 
   environment.gnome.excludePackages = map (x: pkgs.gnome3."${x}") [
    "epiphany"
+   "five-or-more"
    "geary"
    "gedit"
    "gnome-contacts"
@@ -44,10 +45,12 @@ userName:
    "gnome-photos"
    "gnome-robots"
    "gnome-software"
+   "gnome-sudoku"
    "gnome-tetravex"
    "gnome-weather"
    "gnome-chess"
    "hitori"
+   "swell-foop"
    "tali"
   ];
 
