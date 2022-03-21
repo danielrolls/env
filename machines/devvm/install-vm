@@ -1,0 +1,1 @@
+virt-install --name foo --memory 2048 --vcpus 1 --disk ./nixos.qcow2 --import --os-variant nixos-unknown --network default
