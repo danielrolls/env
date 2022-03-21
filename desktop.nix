@@ -38,12 +38,17 @@ userName:
   environment.gnome.excludePackages = map (x: pkgs.gnome3."${x}") [
    "epiphany"
    "geary"
-   "gnome-software"
-   "gnome-maps"
    "gedit"
    "gnome-contacts"
+   "gnome-maps"
    "gnome-photos"
+   "gnome-robots"
+   "gnome-software"
+   "gnome-tetravex"
    "gnome-weather"
+   "gnome-chess"
+   "hitori"
+   "tali"
   ];
 
   virtualisation.libvirtd.enable = true;
