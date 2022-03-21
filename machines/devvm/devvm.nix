@@ -7,8 +7,6 @@ userName:
       (import ../../dev.nix "dan")
     ];
 
-  home-manager.users."${userName}".programs.neovim.extraConfig =  "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]"; 
-
   # Bootloader
   boot.growPartition = true;
   boot.kernelParams = [ "console=ttyS0" ];
@@ -21,7 +19,7 @@ userName:
       autoResize = true;
   };
 
-  users.users."${userName}".extraGroups = [ "wheel" "audio" "networkmanager"]; 
+  users.users."${userName}".extraGroups = [ "wheel" ]; 
 
 }
 
