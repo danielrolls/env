@@ -1,10 +1,10 @@
-userName:
+{userName}:
 {modulesPath, ...}:
 {
   imports =
     [ (modulesPath + "/profiles/qemu-guest.nix")
-      (import ../../homely.nix "dan")
-      (import ../../dev.nix "dan")
+      (import ../../homely.nix "${userName}")
+      (import ../../dev.nix "${userName}")
     ];
 
   # Bootloader
@@ -20,6 +20,11 @@ userName:
   };
 
   users.users."${userName}".extraGroups = [ "wheel" ]; 
+  networking.firewall.enable = false;
+
+  services.openssh = {
+    enable = true;
+  };
 
 }
 
