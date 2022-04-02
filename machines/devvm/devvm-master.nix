@@ -1,11 +1,11 @@
-let homeDir = "/home/dan";
+let userName = "dan";
 in
 { config, pkgs, ... }:
 
 {
 
   imports =
-    [ (import ./devvm.nix "dan")
+    [ (import ./devvm.nix {inherit userName;})
     ];
 
   nix = {
