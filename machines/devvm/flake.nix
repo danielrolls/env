@@ -9,24 +9,31 @@
 
   outputs = { self, nixos, home-manager }: {
 
-    # nix build '.#devvm'
-    devvm = let system = "x86_64-linux";
-    in import "${nixos}/nixos/lib/make-disk-image.nix" {
-      pkgs = nixos.legacyPackages."${system}";
-      lib = nixos.lib;
-      config = (nixos.lib.nixosSystem {
-        inherit system;
-        modules = [ 
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-	  }
-          ./devvm-master.nix
-	  (import ./testvm.nix "dan")
-        ];
-      }).config;
-      format = "qcow2";
-      diskSize = 4096;
-      name = "devvm";
+    devvm = import ./make-devvm-image.nix {
+      inherit self;
+      inherit nixos;
+      inherit home-manager;
+      modules = [
+        ( {nix, ...}: {
+
+          # Binary Cache for Haskell.nix
+          nix.binaryCachePublicKeys = [
+            "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+          ];
+          nix.binaryCaches = [
+            "https://hydra.iohk.io"
+          ];
+
+          fileSystems."/mnt/share" = { 
+              device = "hostshare";
+              fsType = "9p";
+              options = [ "trans=virtio" "version=9p2000.L" ];
+          };
+
+	})
+      ];
+      diskSize = 16384;
     };
+
   };
 }
