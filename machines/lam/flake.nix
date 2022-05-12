@@ -7,9 +7,11 @@
     home-manager.inputs.nixpkgs.follows = "nixos";
     sops-nix.url = github:Mic92/sops-nix;
     sops-nix.inputs.nixpkgs.follows = "nixos";
+    secret.url = path:/data/danlamnixosagekey;
+    secret.flake = false;
   };
 
-  outputs = { self, nixos, home-manager, sops-nix }: {
+  outputs = { self, nixos, home-manager, sops-nix, secret}: {
 
     nixosConfigurations."lam" = nixos.lib.nixosSystem {
       system = "x86_64-linux";
@@ -19,7 +21,7 @@
           home-manager.useGlobalPkgs = true;
 	}
 	sops-nix.nixosModules.sops
-        ./lam-master.nix
+        (import ./lam-master.nix {inherit secret;})
       ];
     };
   };

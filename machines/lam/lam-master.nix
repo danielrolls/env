@@ -1,3 +1,4 @@
+{secret}:
 let homeDir = "/home/dan";
 in
 { config, pkgs, ... }:
@@ -15,5 +16,40 @@ in
       experimental-features = nix-command flakes
     '';
   };
+
+  sops.age.keyFile = secret;
+  sops.defaultSopsFile = ./mysopsdata.yaml;
+
+  sops.secrets."taskwarrior_creds/key" = {
+    name = "taskwarrior_creds/private.key.pem";
+    owner = "dan";
+  };
+  sops.secrets."taskwarrior_creds/private_cert" = {
+    name = "taskwarrior_creds/private_cert.pem";
+    owner = "dan";
+  };
+  sops.secrets."taskwarrior_creds/ca_cert" = {
+    name = "taskwarrior_creds/ca_cert.pem";
+    owner = "dan";
+  };
+
+  home-manager.users.dan = { ... }:
+    let secretBase = "/run/secrets/taskwarrior_creds/";
+    in {
+
+    programs = {
+      taskwarrior.config.taskd = {
+        ca = secretBase + "ca_cert.pem";
+        certificate = secretBase + "private_cert.pem";
+        key = secretBase + "private.key.pem";
+      };
+    };
+
+    programs.taskwarrior.config.taskd = {
+      server = "taskwarrior.inthe.am:53589";
+      credentials = "inthe_am/daniel.rolls.27/2dc1a8f3-aa4a-46d2-aff0-3f81a44f3f8c";
+    };
+  };
+
   system.stateVersion = "20.03"; # Do not change without checking docs
 }
