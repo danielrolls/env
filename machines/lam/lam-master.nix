@@ -10,12 +10,9 @@ in
       (import ./lam.nix "dan")
     ];
 
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
+  nix.extraOptions = ''
       experimental-features = nix-command flakes
     '';
-  };
 
   sops.age.keyFile = secret;
   sops.defaultSopsFile = ./mysopsdata.yaml;
