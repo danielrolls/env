@@ -23,7 +23,7 @@ userName:
         enable = true;
 	vimAlias = true;
 	withNodeJs = true;
-	coc.enable = true;
+	#coc.enable = true;
 	coc.settings = {
             "languageserver" = {
               "haskell" = {
@@ -36,7 +36,7 @@ userName:
           };
 
 	plugins = with pkgs.vimPlugins; [  
-           coc-nvim
+           # coc-nvim
            haskell-vim
            # ghcid
            coc-json

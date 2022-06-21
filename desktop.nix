@@ -43,7 +43,6 @@ userName:
    "gnome-contacts"
    "gnome-mahjongg"
    "gnome-maps"
-   "gnome-photos"
    "gnome-robots"
    "gnome-software"
    "gnome-sudoku"
