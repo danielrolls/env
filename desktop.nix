@@ -40,6 +40,7 @@ userName:
    "five-or-more"
    "geary"
    "gedit"
+   "gnome-2048"
    "gnome-contacts"
    "gnome-mahjongg"
    "gnome-maps"
