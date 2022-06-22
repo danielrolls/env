@@ -35,12 +35,11 @@ userName:
 
   programs.geary.enable = false;
 
-  environment.gnome.excludePackages = map (x: pkgs.gnome3."${x}") [
+  environment.gnome.excludePackages = (map (x: pkgs.gnome3."${x}") [
    "epiphany"
    "five-or-more"
    "geary"
    "gedit"
-   "gnome-2048"
    "gnome-contacts"
    "gnome-mahjongg"
    "gnome-maps"
@@ -53,6 +52,9 @@ userName:
    "hitori"
    "swell-foop"
    "tali"
+  ]) ++
+  [
+   pkgs.gnome-2048
   ];
 
   virtualisation.libvirtd.enable = true;
