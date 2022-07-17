@@ -24,7 +24,7 @@ in
     colorTheme = lib.mkForce "dark-256";
   };
 
-  virtualisation.docker.enable = true;
+  #virtualisation.docker.enable = true;
 
   environment.noXlibs = lib.mkForce false;
 
