@@ -3,7 +3,7 @@ userName:
 
 {
   users.users."${userName}" = {
-    extraGroups = [ "wheel" "audio" "networkmanager" "libvirtd"]; 
+    extraGroups = [ "wheel" "audio" "networkmanager" "libvirtd" "docker"]; 
   };
   sound.enable = true;
 
