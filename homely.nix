@@ -94,7 +94,4 @@ userName:
     };
 
   };
-
-  services.printing.drivers = [pkgs.splix]; # samsung printer drivers
-
 }

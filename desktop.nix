@@ -75,5 +75,7 @@ userName:
       "org/gnome/settings-daemon/plugins/media-keys".home = ["<Super>e"];
     };
   };
+
+  services.printing.drivers = [pkgs.splix]; # samsung printer drivers
 }
 
