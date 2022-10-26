@@ -19,6 +19,7 @@
 	}
 	"${nixos}/nixos/modules/virtualisation/amazon-image.nix"
         ((import ../../homely.nix) "dan")
+        ((import ../../dev.nix) "dan")
         ./local.nix
       ];
       
