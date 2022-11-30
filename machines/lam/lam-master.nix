@@ -34,6 +34,8 @@ in
     let secretBase = "/run/secrets/taskwarrior_creds/";
     in {
 
+    home.stateVersion = "22.05";
+
     programs = {
       taskwarrior.config.taskd = {
         ca = secretBase + "ca_cert.pem";
