@@ -34,7 +34,7 @@ in
     let secretBase = "/run/secrets/taskwarrior_creds/";
     in {
 
-    home.stateVersion = "22.05";
+    home.stateVersion = "22.11";
 
     programs = {
       taskwarrior.config.taskd = {
