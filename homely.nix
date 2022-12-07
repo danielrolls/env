@@ -6,12 +6,6 @@ userName:
   i18n.defaultLocale = "en_GB.UTF-8";
   console.keyMap = "uk";
 
-  environment.systemPackages = with pkgs; [
-    (pkgs.writeShellScriptBin "nixFlakes" ''
-      exec ${pkgs.nixFlakes}/bin/nix --experimental-features "nix-command flakes" "$@"
-    '')
-  ];
-
   users.users."${userName}" = {
     isNormalUser = true;
   };
