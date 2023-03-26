@@ -1,4 +1,5 @@
-{ lib, pkgs, config, modulesPath, shellify, ... }:
+{shellify, ...}:
+{ lib, pkgs, config, modulesPath, ... }:
 
 with lib;
 let

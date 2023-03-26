@@ -8,7 +8,8 @@
     shellify.url = "github:danielrolls/shellify";
   };
 
-  outputs = { self, nixos, home-manager, shellify }: {
+  outputs = { self, nixos, home-manager, shellify }: 
+  {
 
     nixosConfigurations."wslcompat" = nixos.lib.nixosSystem {
       system = "x86_64-linux";
@@ -17,7 +18,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
 	}
-        ./wslcompat-master.nix
+        (import ./wslcompat-master.nix {inherit shellify;})
       ];
     };
   };
