@@ -1,4 +1,4 @@
-{secret}:
+{secret, shellify, ...}:
 let homeDir = "/home/dan";
 in
 { config, pkgs, ... }:
@@ -13,6 +13,10 @@ in
   nix.extraOptions = ''
       experimental-features = nix-command flakes
     '';
+
+  environment.systemPackages = [
+    shellify.packages.x86_64-linux.default
+  ];
 
   sops.age.keyFile = secret;
   sops.defaultSopsFile = ./mysopsdata.yaml;
