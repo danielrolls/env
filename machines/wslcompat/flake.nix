@@ -5,9 +5,11 @@
     nixos.url = "github:nixos/nixpkgs/nixos-22.11";
     home-manager.url = "github:nix-community/home-manager/release-22.11";
     home-manager.inputs.nixpkgs.follows = "nixos";
+    shellify.url = "github:danielrolls/shellify";
   };
 
-  outputs = { self, nixos, home-manager }: {
+  outputs = { self, nixos, home-manager, shellify }: 
+  {
 
     nixosConfigurations."wslcompat" = nixos.lib.nixosSystem {
       system = "x86_64-linux";
@@ -16,7 +18,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
 	}
-        ./wslcompat-master.nix
+        (import ./wslcompat-master.nix {inherit shellify;})
       ];
     };
   };

@@ -1,3 +1,4 @@
+{shellify, ...}:
 { lib, pkgs, config, modulesPath, ... }:
 
 with lib;
@@ -29,6 +30,10 @@ in
       colorTheme = lib.mkForce "dark-256";
     };
   };
+
+  environment.systemPackages = [
+    shellify.packages.x86_64-linux.default
+  ];
 
   #virtualisation.docker.enable = true;
 
