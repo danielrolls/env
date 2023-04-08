@@ -8,11 +8,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1679738842,
-        "narHash": "sha256-CvqRbsyDW756EskojZptDU590rez29RcHDV3ezoze08=",
+        "lastModified": 1680555990,
+        "narHash": "sha256-Tu/i5sd0hk4c4VtWO8XpY3c9KmHDcOWF5Y2GSCh3LXA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "83110c259889230b324bb2d35bef78bf5f214a1f",
+        "rev": "d6f3ba090ed090ae664ab5bac329654093aae725",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
     },
     "nixos": {
       "locked": {
-        "lastModified": 1679710833,
-        "narHash": "sha256-9yKVvGX1oAnlc8vTVvN2lRH35q6ETudQbM1w9ragMRU=",
+        "lastModified": 1680865339,
+        "narHash": "sha256-H6rmJ1CyJ3Q5ZyoLMYq/UEYMS9Q1orJjRpWiQ47HudE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "83607dae4e05e1de755bbc7d7949b33fc1cfbbb9",
+        "rev": "0040164e473509b4aee6aedb3b923e400d6df10b",
         "type": "github"
       },
       "original": {
@@ -56,11 +56,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1679748960,
-        "narHash": "sha256-BP8XcYHyj1NxQi04RpyNW8e7KiXSoI+Fy1tXIK2GfdA=",
+        "lastModified": 1680390120,
+        "narHash": "sha256-RyDJcG/7mfimadlo8vO0QjW22mvYH1+cCqMuigUntr8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "da26ae9f6ce2c9ab380c0f394488892616fc5a6a",
+        "rev": "c1e2efaca8d8a3db6a36f652765d6c6ba7bb8fae",
         "type": "github"
       },
       "original": {
@@ -97,17 +97,14 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1679775113,
-        "narHash": "sha256-faCKfA6qijQKwo0yfQRV+bZngE16g+55l6See2w5g3s=",
-        "owner": "danielrolls",
-        "repo": "shellify",
-        "rev": "110980142073a4cbfb0c2289b4d62cdeb65d7245",
-        "type": "github"
+        "lastModified": 1680898509,
+        "narHash": "sha256-z/Vil59UN/qX1zQLXybNfsutg1GSpgaiX+rai8JhhoI=",
+        "path": "/home/dan/repos/shellify",
+        "type": "path"
       },
       "original": {
-        "owner": "danielrolls",
-        "repo": "shellify",
-        "type": "github"
+        "path": "/home/dan/repos/shellify",
+        "type": "path"
       }
     },
     "sops-nix": {
@@ -118,11 +115,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1679799335,
-        "narHash": "sha256-YrnDyftm0Mk4JLuw3sDBPNfSjk054N0dqQx8FW4JqDM=",
+        "lastModified": 1680404136,
+        "narHash": "sha256-06D8HJmRv4DdpEQGblMhx2Vm81SBWM61XBBIx7QQfo0=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "4740f80ca6e756915aaaa0a9c5fbb61ba09cc145",
+        "rev": "b93eb910f768f9788737bfed596a598557e5625d",
         "type": "github"
       },
       "original": {
