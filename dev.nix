@@ -67,4 +67,8 @@ userName:
 
   };
 
+  environment.systemPackages = with pkgs; [
+    jrnl
+  ];
+
 }
