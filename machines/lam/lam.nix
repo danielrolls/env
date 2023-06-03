@@ -24,7 +24,6 @@ userName:
 
   services.xserver = {
     libinput.enable = true; # Enable touchpad support.
-    videoDrivers = [ "modesetting" ];
   };
 
   # Use the systemd-boot EFI boot loader.
