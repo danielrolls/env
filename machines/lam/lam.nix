@@ -22,9 +22,7 @@ userName:
     options = ["nofail"];
   };
 
-  services.xserver = {
-    libinput.enable = true; # Enable touchpad support.
-  };
+  services.xserver.libinput.enable = true; # Enable touchpad support.
 
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
