@@ -57,11 +57,11 @@ userName:
             label = "Details";
           };
           report = {
-            next.filter = "-chase status:pending limit:page";
+            next.filter = "-chase -WAITING status:pending limit:page";
             chase = {
               description = "Tasks to chase up";
               columns = "id,start.age,entry.age,depends,priority,project,recur,scheduled.countdown,due.relative,until.remaining,description,urgency";
-              filter = "+chase status:pending limit:page";
+              filter = "+chase -WAITING status:pending limit:page";
               labels = "ID,Active,Age,Deps,P,Project,Recur,S,Due,Until,Description,Urg";
               sort = "urgency-";
             };
