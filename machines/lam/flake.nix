@@ -6,6 +6,7 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixos";
     shellify.url = "github:danielrolls/shellify";
+    shellify.inputs.nixpkgs.follows = "nixos";
     sops-nix.url = github:Mic92/sops-nix;
     sops-nix.inputs.nixpkgs.follows = "nixos";
     secret.url = path:/data/danlamnixosagekey;
