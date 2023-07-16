@@ -1,5 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
+
 pkgs.mkShell {
-  name = "backup";
-  buildInputs = [ pkgs.borgbackup ];
+
+  buildInputs = [
+    pkgs.borgbackup
+  ];
+
 }
