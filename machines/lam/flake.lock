@@ -23,11 +23,11 @@
     },
     "nixos": {
       "locked": {
-        "lastModified": 1690630041,
-        "narHash": "sha256-gbnvqm5goS9DSKAqGFpq3398aOpwejmq4qWikqmQyRo=",
+        "lastModified": 1691155011,
+        "narHash": "sha256-O15tC0ysw+fcacEbOzrDrkVNIR+SgtArSGvpgsEqpvA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d57e8c535d4cbb07f441c30988ce52eec69db7a8",
+        "rev": "9652a97d9738d3e65cf33c0bc24429e495a7868f",
         "type": "github"
       },
       "original": {
@@ -82,11 +82,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1690148304,
-        "narHash": "sha256-DfXI3mHRo6hXQXpdGEvZdDjW3n75Q6INVZzwgQEMtF8=",
+        "lastModified": 1690752061,
+        "narHash": "sha256-jRSwnr/HRHqX+p/nxQB8/R3gYMlgVh4WK7T8wCEhIXI=",
         "owner": "danielrolls",
         "repo": "shellify",
-        "rev": "1f5f13458b2c572a9c71f547fd62874e0155f163",
+        "rev": "6136283983d8f7ad7da4479b0d4fdba9f29dc7ab",
         "type": "github"
       },
       "original": {
