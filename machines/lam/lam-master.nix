@@ -1,4 +1,4 @@
-{secret, shellify, ...}:
+{secret, shellify, haskellUpdates, ...}:
 let homeDir = "/home/dan";
 in
 { config, pkgs, ... }:
@@ -15,7 +15,8 @@ in
     '';
 
   environment.systemPackages = [
-    shellify.packages.x86_64-linux.default
+    haskellUpdates.legacyPackages.x86_64-linux.shellify
+    # shellify.packages.x86_64-linux.default
   ];
 
   sops.age.keyFile = secret;

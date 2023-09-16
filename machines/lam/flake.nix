@@ -3,6 +3,7 @@
 
   inputs = {
     nixos.url = "github:nixos/nixpkgs/nixos-23.05";
+    haskellUpdates.url = "github:nixos/nixpkgs/haskell-updates";
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixos";
     shellify.url = "github:danielrolls/shellify";
@@ -13,7 +14,7 @@
     secret.flake = false;
   };
 
-  outputs = { self, nixos, home-manager, shellify, sops-nix, secret}: {
+  outputs = { self, nixos, haskellUpdates, home-manager, shellify, sops-nix, secret}: {
 
     nixosConfigurations."lam" = nixos.lib.nixosSystem {
       system = "x86_64-linux";
@@ -23,7 +24,7 @@
           home-manager.useGlobalPkgs = true;
 	}
 	sops-nix.nixosModules.sops
-        (import ./lam-master.nix {inherit secret shellify;})
+        (import ./lam-master.nix {inherit secret shellify haskellUpdates;})
       ];
     };
   };
