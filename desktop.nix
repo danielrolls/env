@@ -31,6 +31,7 @@ userName:
     signal-desktop
     usbutils
     file
+    pinentry-gtk2 # for gpg
   ];
 
   programs.geary.enable = false;
@@ -69,6 +70,9 @@ userName:
     programs = {
       chromium.enable = true;
       firefox.enable = true;
+      gpg = {
+        enable = true;
+      };
     };
 
     dconf.settings = {
