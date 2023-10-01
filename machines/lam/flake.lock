@@ -2,11 +2,11 @@
   "nodes": {
     "haskellUpdates": {
       "locked": {
-        "lastModified": 1695427891,
-        "narHash": "sha256-SjwKEwxoIzNNNnREajxfozy0+sStEKyVnUHBzTwR3fg=",
+        "lastModified": 1696119242,
+        "narHash": "sha256-C4k4xsiSQPATyOeMtpKHokLwti4X7XI229rlFy+wsxY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c7e7b8497d030b52632cba51334a2320fb0655f6",
+        "rev": "eff9c8e1f545a841ae02aa54ef5e00e78291788b",
         "type": "github"
       },
       "original": {
@@ -39,11 +39,11 @@
     },
     "nixos": {
       "locked": {
-        "lastModified": 1695272228,
-        "narHash": "sha256-4uw2OdJPVyjdB+xcDst9SecrNIpxKXJ2usN3M5HVa7o=",
+        "lastModified": 1695825837,
+        "narHash": "sha256-4Ne11kNRnQsmSJCRSSNkFRSnHC4Y5gPDBIQGjjPfJiU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "55ac2a9d2024f15c56adf20da505b29659911da8",
+        "rev": "5cfafa12d57374f48bcc36fda3274ada276cf69e",
         "type": "github"
       },
       "original": {
