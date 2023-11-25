@@ -1,4 +1,4 @@
-{secret, shellify, haskellUpdates, ...}:
+{secret, shellify, ...}:
 let homeDir = "/home/dan";
 in
 { config, pkgs, ... }:
@@ -15,7 +15,8 @@ in
     '';
 
   environment.systemPackages = [
-    haskellUpdates.legacyPackages.x86_64-linux.shellify
+    pkgs.shellify
+    #haskellUpdates.legacyPackages.x86_64-linux.shellify
     # shellify.packages.x86_64-linux.default
   ];
 

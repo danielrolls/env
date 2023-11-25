@@ -62,7 +62,7 @@ userName:
 
   home-manager.users."${userName}" = { pkgs, ... }: {
     home.packages = with pkgs; [ 
-      avidemux
+      #avidemux
       keepassxc
       xournalpp
     ];
