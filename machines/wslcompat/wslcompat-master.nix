@@ -29,6 +29,7 @@ in
 
       colorTheme = lib.mkForce "dark-256";
     };
+    programs.vscode.enable = lib.mkForce false;
   };
 
   environment.systemPackages = [
