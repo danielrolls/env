@@ -16,9 +16,8 @@ userName:
       enable = true;
       layout = "gb";
 
-      displayManager.gdm.enable = true;
-      displayManager.gdm.wayland = true;
-      desktopManager.gnome.enable = true;
+      displayManager.defaultSession = "xfce";
+      desktopManager.xfce.enable = true;
     };
 
     gnome.games.enable = true;
@@ -32,30 +31,6 @@ userName:
     usbutils
     file
     pinentry-gtk2 # for gpg
-  ];
-
-  programs.geary.enable = false;
-
-  environment.gnome.excludePackages = (map (x: pkgs.gnome3."${x}") [
-   "epiphany"
-   "five-or-more"
-   "geary"
-   "gedit"
-   "gnome-contacts"
-   "gnome-mahjongg"
-   "gnome-maps"
-   "gnome-robots"
-   "gnome-software"
-   "gnome-sudoku"
-   "gnome-tetravex"
-   "gnome-weather"
-   "gnome-chess"
-   "hitori"
-   "swell-foop"
-   "tali"
-  ]) ++
-  [
-   pkgs.gnome-2048
   ];
 
   virtualisation.libvirtd.enable = true;
