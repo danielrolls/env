@@ -13,7 +13,7 @@ userName:
            # Emacs term mode doesn't support xterm title escape sequence (\e]0;)
            PS1="\n\[\033[$PROMPT_COLOR\][\u@\h:\w]\\$\[\033[0m\] "
          else
-	   . ${pkgs.git}/share/bash-completion/completions/git-prompt.sh
+           . ${pkgs.git}/share/bash-completion/completions/git-prompt.sh
            PS1="\n\[\033[$PROMPT_COLOR\][\[\e]0;\u@\h: \w\a\]\u@\h:\w"'$(__git_ps1 ":%s")'"]\\$\[\033[0m\] "
          fi
          if test "$TERM" = "xterm"; then
