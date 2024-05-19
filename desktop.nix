@@ -10,8 +10,17 @@ userName:
   hardware.pulseaudio.enable = true;
 
   services = {
-    printing.enable = true;
+    printing = {
+      enable = true;
+      stateless = true;
+    };
     
+    avahi = {
+      enable = true;
+      nssmdns = true;
+      openFirewall = true;
+    };
+
     xserver = {
       enable = true;
       layout = "gb";
