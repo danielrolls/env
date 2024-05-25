@@ -57,4 +57,16 @@ in
   };
 
   system.stateVersion = "20.03"; # Do not change without checking docs
+
+  services.printing.drivers = [pkgs.splix]; # samsung printer drivers
+
+  hardware.printers.ensurePrinters = [
+    {
+      name = "sparrow-chick";
+      location = "Home";
+      deviceUri = "ipp://192.168.0.30/printers/sparrow";
+      model = "everywhere"; # Samsung ML-2240, 2.0.0
+      ppdOptions.PageSize = "A4";
+    }
+  ];
 }
