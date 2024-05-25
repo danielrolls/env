@@ -2,9 +2,9 @@
   description = "Nixos Flake for Lam";
 
   inputs = {
-    nixos.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixos.url = "github:nixos/nixpkgs/nixos-24.05";
     #haskellUpdates.url = "github:nixos/nixpkgs/haskell-updates";
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixos";
     shellify.url = "github:danielrolls/shellify";
     shellify.inputs.nixpkgs.follows = "nixos";

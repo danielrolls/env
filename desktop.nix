@@ -17,17 +17,18 @@ userName:
     
     avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
       openFirewall = true;
     };
 
     xserver = {
       enable = true;
-      layout = "gb";
+      xkb.layout = "gb";
 
-      displayManager.defaultSession = "xfce";
       desktopManager.xfce.enable = true;
     };
+
+    displayManager.defaultSession = "xfce";
 
     gnome.games.enable = true;
   };
