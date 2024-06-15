@@ -33,6 +33,27 @@ userName:
     gnome.games.enable = true;
   };
 
+  environment.gnome.excludePackages = (map (x: pkgs.gnome3."${x}") [
+   "epiphany"
+   "five-or-more"
+   "geary"
+   "gnome-contacts"
+   "gnome-mahjongg"
+   "gnome-maps"
+   "gnome-robots"
+   "gnome-software"
+   "gnome-sudoku"
+   "gnome-tetravex"
+   "gnome-weather"
+   "gnome-chess"
+   "hitori"
+   "swell-foop"
+   "tali"
+  ]) ++
+  [
+   pkgs.gnome-2048
+  ];
+
   environment.systemPackages = with pkgs; [
     vlc
     bash-completion
