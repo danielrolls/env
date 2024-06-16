@@ -1,4 +1,4 @@
-{secret, shellify, ...}:
+{ shellify, ...}:
 let homeDir = "/home/dan";
 in
 { config, pkgs, ... }:
@@ -20,7 +20,6 @@ in
     # shellify.packages.x86_64-linux.default
   ];
 
-  sops.age.keyFile = secret;
   sops.defaultSopsFile = ./mysopsdata.yaml;
 
   sops.secrets."taskwarrior_creds/key" = {

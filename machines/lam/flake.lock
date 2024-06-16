@@ -39,11 +39,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1712437997,
-        "narHash": "sha256-g0whLLwRvgO2FsyhY8fNk+TWenS3jg5UdlWL4uqgFeo=",
+        "lastModified": 1718478900,
+        "narHash": "sha256-v43N1gZLcGkhg3PdcrKUNIZ1L0FBzB2JqhIYEyKAHEs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e38d7cb66ea4f7a0eb6681920615dfcc30fc2920",
+        "rev": "c884223af91820615a6146af1ae1fea25c107005",
         "type": "github"
       },
       "original": {
@@ -57,22 +57,8 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixos": "nixos",
-        "secret": "secret",
         "shellify": "shellify",
         "sops-nix": "sops-nix"
-      }
-    },
-    "secret": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1652006335,
-        "narHash": "sha256-ZFr9+epysrRUcRSq8fdeTWYe5+lKcO0+YJdEgE40y+Y=",
-        "path": "/data/danlamnixosagekey",
-        "type": "path"
-      },
-      "original": {
-        "path": "/data/danlamnixosagekey",
-        "type": "path"
       }
     },
     "shellify": {
@@ -103,11 +89,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1712617241,
-        "narHash": "sha256-a4hbls4vlLRMciv62YrYT/Xs/3Cubce8WFHPUDWwzf8=",
+        "lastModified": 1718506969,
+        "narHash": "sha256-Pm9I/BMQHbsucdWf6y9G3xBZh3TMlThGo4KBbeoeczg=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "538c114cfdf1f0458f507087b1dcf018ce1c0c4c",
+        "rev": "797ce4c1f45a85df6dd3d9abdc53f2691bea9251",
         "type": "github"
       },
       "original": {
