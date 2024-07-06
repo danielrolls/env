@@ -32,6 +32,16 @@ userName:
         userEmail = "daniel.rolls.27@googlemail.com";
       };
 
+      neovim = {
+	plugins = with pkgs.vimPlugins; [
+           haskell-vim
+           coc-json
+           coc-vimlsp
+	];
+        extraConfig =  "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]";
+
+      };
+
       vscode = {
         enable = true;
         package = pkgs.vscodium; # free version of vscode

@@ -3,6 +3,7 @@ userName:
 {
   imports =
     [ (import ../../homely.nix "dan")
+      (import ../../taskwarriorclient.nix "dan")
       (import ../../dev.nix "dan")
       (import ../../desktop.nix "dan")
     ];
@@ -34,6 +35,5 @@ userName:
  
   hardware.sensor.iio.enable = true;
 
-  home-manager.users."${userName}".programs.neovim.extraConfig =  "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]"; 
 }
 
