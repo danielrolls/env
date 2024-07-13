@@ -37,6 +37,22 @@
         "type": "github"
       }
     },
+    "nixos-unstable": {
+      "locked": {
+        "lastModified": 1720418205,
+        "narHash": "sha256-cPJoFPXU44GlhWg4pUk9oUPqurPlCFZ11ZQPk21GTPU=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "655a58a72a6601292512670343087c2d75d859c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1719720450,
@@ -57,6 +73,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixos": "nixos",
+        "nixos-unstable": "nixos-unstable",
         "shellify": "shellify",
         "sops-nix": "sops-nix"
       }

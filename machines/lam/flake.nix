@@ -3,6 +3,7 @@
 
   inputs = {
     nixos.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     #haskellUpdates.url = "github:nixos/nixpkgs/haskell-updates";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixos";
@@ -12,7 +13,7 @@
     sops-nix.inputs.nixpkgs.follows = "nixos";
   };
 
-  outputs = { self, nixos, home-manager, shellify, sops-nix }: {
+  outputs = { self, nixos, nixos-unstable, home-manager, shellify, sops-nix }: {
 
     nixosConfigurations."lam" = nixos.lib.nixosSystem {
       system = "x86_64-linux";
@@ -22,7 +23,7 @@
           home-manager.useGlobalPkgs = true;
 	}
 	sops-nix.nixosModules.sops
-        (import ./lam-master.nix {inherit shellify;})
+        (import ./lam-master.nix {inherit shellify nixos-unstable;})
       ];
     };
   };
