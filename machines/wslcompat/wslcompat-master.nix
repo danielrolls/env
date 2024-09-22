@@ -13,6 +13,8 @@ in
     ((import ../../dev.nix) defaultUser)
   ];
 
+  nixpkgs.config.allowUnfreePredicate = pk: true;
+
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
@@ -62,10 +64,12 @@ in
   security.sudo.wheelNeedsPassword = false;
 
   # Disable systemd units that don't make sense on WSL
-  systemd.services."serial-getty@ttyS0".enable = false;
-  systemd.services."serial-getty@hvc0".enable = false;
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@".enable = false;
+  systemd.services = {
+    "serial-getty@ttyS0".enable = false;
+    "serial-getty@hvc0".enable = false;
+    "getty@tty1".enable = false;
+    "autovt@".enable = false;
+  };
 
   systemd.services.firewall.enable = false;
   systemd.services.systemd-resolved.enable = false;
