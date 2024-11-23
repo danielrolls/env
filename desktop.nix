@@ -5,9 +5,6 @@ userName:
   users.users."${userName}" = {
     extraGroups = [ "wheel" "audio" "networkmanager" "libvirtd" "docker"]; 
   };
-  sound.enable = true;
-
-  hardware.pulseaudio.enable = true;
 
   services = {
     printing = {
@@ -25,15 +22,15 @@ userName:
       enable = true;
       xkb.layout = "gb";
 
-      desktopManager.xfce.enable = true;
+      desktopManager.gnome.enable = true;
     };
 
-    displayManager.defaultSession = "xfce";
+    displayManager.defaultSession = "gnome";
 
     gnome.games.enable = true;
   };
 
-  environment.gnome.excludePackages = (map (x: pkgs.gnome3."${x}") [
+  environment.gnome.excludePackages = (map (x: pkgs."${x}") [
    "epiphany"
    "five-or-more"
    "geary"

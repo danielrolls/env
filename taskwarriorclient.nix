@@ -1,11 +1,12 @@
 userName:
-{ ... }:
+{ pkgs, ... }:
 
 {
   home-manager.users."${userName}" = { ... }: {
     programs = {
       taskwarrior = {
         enable = true;
+        package  = pkgs.taskwarrior3;
         colorTheme = "light-256";
         config = {
           urgency = {
