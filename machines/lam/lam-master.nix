@@ -17,6 +17,7 @@ in
 
   environment.systemPackages = [
     pkgs.shellify
+    pkgs.sops
     #haskellUpdates.legacyPackages.x86_64-linux.shellify
     # shellify.packages.x86_64-linux.default
   ];
