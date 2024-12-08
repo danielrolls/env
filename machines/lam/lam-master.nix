@@ -18,6 +18,8 @@ in
   environment.systemPackages = [
     pkgs.shellify
     pkgs.sops
+    pkgs.age
+    pkgs.glow # For viewing Markdown in the shell
     #haskellUpdates.legacyPackages.x86_64-linux.shellify
     # shellify.packages.x86_64-linux.default
   ];
