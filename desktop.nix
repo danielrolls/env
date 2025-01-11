@@ -22,10 +22,8 @@ userName:
       enable = true;
       xkb.layout = "gb";
 
-      desktopManager.gnome.enable = true;
+      desktopManager.xfce.enable = true;
     };
-
-    displayManager.defaultSession = "gnome";
 
     gnome.games.enable = true;
   };
