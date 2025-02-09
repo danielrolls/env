@@ -16,12 +16,12 @@ in
     '';
 
   environment.systemPackages = [
-    pkgs.shellify
     pkgs.sops
     pkgs.age
-    pkgs.glow # For viewing Markdown in the shell
+    unstablePkgs.aws-spend-summary
     #haskellUpdates.legacyPackages.x86_64-linux.shellify
     # shellify.packages.x86_64-linux.default
+    pkgs.niv
   ];
 
   sops.defaultSopsFile = ./mysopsdata.yaml;

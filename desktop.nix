@@ -57,6 +57,8 @@ userName:
     usbutils
     file
     pinentry-gtk2 # for gpg
+    glow # For viewing Markdown in the shell
+    shellify
   ];
 
   virtualisation.libvirtd.enable = true;
