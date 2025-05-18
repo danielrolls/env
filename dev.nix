@@ -45,7 +45,8 @@ userName:
       vscode = {
         enable = true;
         package = pkgs.vscodium; # free version of vscode
-        extensions = with pkgs.vscode-extensions; [
+
+        profiles.default.extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
           haskell.haskell
         ];
