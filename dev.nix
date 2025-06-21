@@ -47,8 +47,9 @@ userName:
         package = pkgs.vscodium; # free version of vscode
 
         profiles.default.extensions = with pkgs.vscode-extensions; [
-          vscodevim.vim
+          github.copilot
           haskell.haskell
+          vscodevim.vim
         ];
       };
     };
@@ -80,6 +81,7 @@ userName:
 
   environment.systemPackages = with pkgs; [
     jrnl
+    claude-code
   ];
 
 }
