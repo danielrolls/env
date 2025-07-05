@@ -24,8 +24,10 @@ userName:
       };
 
       direnv.enable = true;
-      bash.enable = true;
-
+      bash = {
+        enable = true;
+        historyControl = ["ignoreboth"];
+      };
     };
 
     home = {
