@@ -11,6 +11,13 @@ in
       (import ./lam.nix "dan")
     ];
 
+    nixpkgs.config.allowUnfreePredicate = pk: builtins.elem (lib.getName pk) [
+      "claude-code"
+      "cursor"
+      "vscode"
+      "vscode-extension-github-copilot"
+    ];
+
   nix.extraOptions = ''
       experimental-features = nix-command flakes
     '';
