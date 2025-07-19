@@ -17,6 +17,11 @@ in
       "vscode"
       "vscode-extension-github-copilot"
     ];
+  fileSystems."/run/ram" =
+    { device = "tmpfs";
+      fsType = "tmpfs";
+      options = [ "size=1M" ];
+    };
 
   nix.extraOptions = ''
       experimental-features = nix-command flakes
