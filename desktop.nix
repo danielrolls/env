@@ -76,6 +76,9 @@ userName:
       gpg = {
         enable = true;
       };
+      librewolf = {
+        enable = true;
+      };
     };
 
     dconf.settings = {
