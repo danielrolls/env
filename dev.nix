@@ -28,8 +28,10 @@ userName:
 
       git = {
         enable = true;
-        userName = "Daniel Rolls";
-        userEmail = "daniel.rolls.27@googlemail.com";
+        settings.user = {
+          name = "Daniel Rolls";
+          email = "daniel.rolls.27@googlemail.com";
+        };
       };
 
       neovim = {
