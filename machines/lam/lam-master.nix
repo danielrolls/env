@@ -73,10 +73,9 @@ in
 
   hardware.printers.ensurePrinters = [
     {
-      name = "sparrow-chick";
+      name = "bruder";
       location = "Home";
-      deviceUri = "ipp://192.168.0.30/printers/sparrow";
-      model = "everywhere"; # Samsung ML-2240, 2.0.0
+      model = "everywhere";
       ppdOptions.PageSize = "A4";
     }
   ];
