@@ -31,8 +31,6 @@ userName:
     efi.canTouchEfiVariables = true;
   };
 
-  swapDevices = lib.mkForce [];
- 
   hardware.sensor.iio.enable = true;
 
 }
