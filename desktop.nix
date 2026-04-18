@@ -59,6 +59,7 @@ userName:
     pinentry-gtk2 # for gpg
     glow # For viewing Markdown in the shell
     shellify
+    xsel
   ];
 
   virtualisation.libvirtd.enable = true;
