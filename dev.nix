@@ -58,6 +58,7 @@ userName:
 
     home.packages = with pkgs; [
       stack
+      unzip
     ];
 
     
