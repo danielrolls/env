@@ -64,7 +64,7 @@ userName:
 
   virtualisation.libvirtd.enable = true;
 
-  home-manager.users."${userName}" = { pkgs, ... }: {
+  home-manager.users."${userName}" = { pkgs, config, ... }: {
     home.packages = with pkgs; [ 
       #avidemux
       keepassxc
@@ -73,7 +73,11 @@ userName:
 
     programs = {
       chromium.enable = true;
-      firefox.enable = true;
+      firefox = {
+        enable = true;
+        configPath = "${config.xdg.configHome}/mozilla/firefox"; # Default from 26.05
+      };
+
       gpg = {
         enable = true;
       };

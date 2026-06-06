@@ -41,7 +41,8 @@ userName:
            coc-vimlsp
 	];
         extraConfig =  "let g:vimwiki_list = [{'path': '/data/wiki/', 'syntax': 'markdown', 'ext': '.md'}]";
-
+        withRuby = false; # Moving to default from 26.06
+        withPython3 = false; # Moving to default from 26.06
       };
 
       vscode = {
