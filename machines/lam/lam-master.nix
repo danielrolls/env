@@ -1,4 +1,4 @@
-{ shellify, nixos-unstable, ...}:
+{ nixos-unstable, shellify, ...}:
 let homeDir = "/home/dan";
     unstablePkgs = nixos-unstable.legacyPackages.x86_64-linux;
 in
