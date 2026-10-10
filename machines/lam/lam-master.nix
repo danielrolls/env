@@ -27,6 +27,7 @@ in
       experimental-features = nix-command flakes
     '';
 
+  nix.settings.download-attempts = 10;
   environment.systemPackages = [
     pkgs.sops
     pkgs.age
