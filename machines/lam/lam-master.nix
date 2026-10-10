@@ -34,7 +34,9 @@ in
     unstablePkgs.aws-spend-summary
     #haskellUpdates.legacyPackages.x86_64-linux.shellify
     # shellify.packages.x86_64-linux.default
-    pkgs.niv
+    #pkgs.niv
+    #pkgs.libreoffice
+    pkgs.poppler-utils
   ];
 
   sops.defaultSopsFile = ./mysopsdata.yaml;
