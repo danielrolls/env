@@ -74,6 +74,21 @@ in
 
   services.printing.drivers = [pkgs.splix]; # samsung printer drivers
 
+  networking.wireless = {
+    #networks = {
+    #  "giadinh" = {  };
+    #};
+    iwd = {
+      enable = true;
+      settings = {
+        Settings = {
+          AutoConnect = true;
+        };
+      };
+    };
+  };
+
+
   hardware.printers.ensurePrinters = [
     {
       name = "bruder";
