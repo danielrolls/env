@@ -85,6 +85,7 @@ userName:
 
   environment.systemPackages = with pkgs; [
     jrnl
+    dig
     claude-code
   ];
 
