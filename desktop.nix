@@ -86,6 +86,17 @@ userName:
       };
     };
 
+    xfconf.settings.xfce4-panel = {
+      "panels/panel-2/plugin-ids" = [ 15 16 17 19 20 23 24 ];
+      "plugins/plugin-23"    = "launcher";
+      "plugins/plugin-23/items"   = [ "librewolf.desktop" ];
+      "plugins/plugin-24"    = "launcher";
+      "plugins/plugin-24/items"   = [ "xterm.desktop" ];
+    };
+    xfconf.settings.xfce4-helpers = {
+      "WebBrowser" = "librewolf";
+    };
+
     dconf.settings = {
       "org/gnome/settings-daemon/plugins/media-keys".home = ["<Super>e"];
     };
