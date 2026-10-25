@@ -36,6 +36,7 @@ in
     # shellify.packages.x86_64-linux.default
     #pkgs.niv
     #pkgs.libreoffice
+    pkgs.wireguard-tools
     pkgs.poppler-utils
   ];
 
