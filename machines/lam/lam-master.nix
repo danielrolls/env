@@ -61,6 +61,40 @@ in
 
     home.stateVersion = "22.11";
 
+    home.packages = [
+      pkgs.junction
+    ];
+
+
+    # For GIO / xdg-mime consumers
+    xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "x-scheme-handler/http"  = "re.sonny.Junction.desktop";
+        "x-scheme-handler/https" = "re.sonny.Junction.desktop";
+        "text/html"              = "re.sonny.Junction.desktop";
+        "video/*"                = "vlc.desktop";
+      };
+    };
+
+    # For Xfce's exo-open: register Junction as a WebBrowser helper
+    xdg.dataFile."xfce4/helpers/junction.desktop".text = ''
+      [Desktop Entry]
+      Version=1.0
+      Type=X-XFCE-Helper
+      Name=Junction
+      Icon=re.sonny.Junction.desktop
+      NoDisplay=true
+      X-XFCE-Category=WebBrowser
+      X-XFCE-Commands=re.sonny.Junction
+      X-XFCE-CommandsWithParameter=re.sonny.Junction "%s"
+    '';
+
+    xdg.configFile."xfce4/helpers.rc".text = ''
+      WebBrowser=junction
+    '';
+
+
     programs = {
       taskwarrior.config.taskd = {
         ca = secretBase + "ca_cert.pem";
